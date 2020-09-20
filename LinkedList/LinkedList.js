@@ -17,4 +17,17 @@ export default class LinkedList {
 
   }
 
+  addToTail(data) {
+      let tail = this.head;
+      if (!tail) {
+        this.head = new Node(data);
+      } else {
+        while (tail.getNextNode() !== null) {
+          tail = tail.getNextNode();
+        }
+        tail.setNextNode(new Node(data));
+      }
+  }
+  
+
 }
