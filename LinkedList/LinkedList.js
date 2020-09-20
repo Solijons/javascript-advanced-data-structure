@@ -28,6 +28,18 @@ export default class LinkedList {
         tail.setNextNode(new Node(data));
       }
   }
+
+  removeHead() {
+    const removedHead = this.head;
+    if (!removedHead) {
+      return;
+    }
+    
+    this.head = removedHead.getNextNode();
+
+    return removedHead.data;
+
+  }
   
 
 }
